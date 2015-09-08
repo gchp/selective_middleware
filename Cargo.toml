@@ -1,6 +1,12 @@
 [package]
 name = "selective_middleware"
 version = "0.1.0"
+description = "Selective middleware for Iron applications"
+homepage = "https://github.com/gchp/selective_middleware"
+repository = "https://github.com/gchp/selective_middleware"
+keywords = ["iron", "middleware", "selective", "web"]
+license = "MIT"
+readme = "README.md"
 authors = ["Greg Chapple <gregchapple1@gmail.com>"]
 
 [dependencies]
