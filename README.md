@@ -42,7 +42,7 @@ fn main() {
     let mut router = Router::new();
 
     router.get("/", handler);
-    router.get("/foo", SelectiveMiddleWare::new(handler, MyMiddleware));
+    router.get("/foo", SelectiveMiddleWare::new(handler, vec!(MyMiddleware)));
 
     Iron::new(router).http("localhost:3000").unwrap();
 }
@@ -62,7 +62,7 @@ fn main() {
     let mut router = Router::new();
 
     router.get("/", handler);
-    router.get("/foo", with_middleware!(handler, MyMiddleware));
+    router.get("/foo", with_middleware!(handler, [MyMiddleware]));
 
     Iron::new(router).http("localhost:3000").unwrap();
 }
